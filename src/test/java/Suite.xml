@@ -24,6 +24,6 @@
         </classes>
     </test>
 
-    <parameter name="Search" value=""></parameter>
+    <parameter name="Search" value="Çelik Gümüşdağ"></parameter>
 
 </suite>

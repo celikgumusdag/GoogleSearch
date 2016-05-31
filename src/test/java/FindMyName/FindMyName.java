@@ -21,6 +21,7 @@ public class FindMyName extends Run {
             searchbox.sendKeys(Search);
             searchbox.submit();
             extentTest.log(LogStatus.PASS, "İsim Arama Başarılı");
+            logger.info(Search);
         } catch (Exception e) {
             Assert.fail("<br>İsim Arama Başarısız:<br><br>" + e);
         }
