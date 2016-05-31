@@ -5,6 +5,7 @@ import com.relevantcodes.extentreports.LogStatus;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 /**
@@ -13,10 +14,11 @@ import org.testng.annotations.Test;
 public class FindMyName extends Run {
 
     @Test
-    public void FindMyName() {
+    @Parameters("Search")
+    public void FindMyName(String Search) {
         try {
             WebElement searchbox = driver.findElement(By.cssSelector("#sb_ifc0>#gs_lc0>input:nth-of-type(1)"));
-            searchbox.sendKeys("Çelik Gümüşdağ");
+            searchbox.sendKeys(Search);
             searchbox.submit();
             extentTest.log(LogStatus.PASS, "İsim Arama Başarılı");
         } catch (Exception e) {
