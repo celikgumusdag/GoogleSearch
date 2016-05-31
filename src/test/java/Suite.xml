@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuitim" preserve-order="true">
+
+    <listeners>
+        <listener class-name="Listener.Listener"></listener>
+    </listeners>
+
+    <test name="OpenTest">
+        <classes>
+            <class name="OpenGoogle.OpenGoogle"/>
+        </classes>
+    </test>
+
+    <test name="FindNameTest">
+        <classes>
+            <class name="FindMyName.FindMyName"/>
+        </classes>
+    </test>
+
+    <test name="ClickTest">
+        <classes>
+            <class name="ClickFirst.ClickFirst"/>
+        </classes>
+    </test>
+
+</suite>
