@@ -13,9 +13,15 @@ import org.testng.annotations.Test;
  */
 public class FindMyName extends Run {
 
+    protected static String Search = System.getProperty("Search");
+
     @Test
-    @Parameters("Search")
-    public void FindMyName(String Search) {
+    public void FindMyName() {
+
+        if (Search == null) {
+            Search = "Çelik Gümüşdağ";
+        }
+
         try {
             WebElement searchbox = driver.findElement(By.cssSelector("#sb_ifc0>#gs_lc0>input:nth-of-type(1)"));
             searchbox.sendKeys(Search);
