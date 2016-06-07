@@ -14,8 +14,10 @@ public class ClickFirst extends Run {
     @Test
     public void ClickFirst() {
         try {
+            String link=driver.findElement(By.cssSelector("#rso>.srg:nth-of-type(1)>.g:nth-of-type(1)>.rc>.r>a")).getText();
             driver.findElement(By.cssSelector("#rso>.srg:nth-of-type(1)>.g:nth-of-type(1)>.rc>.r>a")).click(); //İlk Linke Tıklama İşlemi
             extentTest.log(LogStatus.PASS, "Tıklama Başarılı");
+            logger.info(link);
         } catch (Exception e) {
             Assert.fail("<br>Tıklama Başarısız:<br><br>" + e);
         }
