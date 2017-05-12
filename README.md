@@ -2,7 +2,7 @@
 
 Description
 ------------
-Simple implementation of Google Search automation by using Selenim with Java
+Simple implementation of Google Search automation by using Selenium with Java
 
 About
 ------------
